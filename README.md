@@ -39,3 +39,22 @@ Compiling using C
 ![sumncode](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/da0e7ecf-0612-4790-b80f-cfb5616e346a)
 
 
+![lab2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/a172e2a2-2405-456f-8f67-1b23f2a474c2)
+
+
+![O1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/df255613-656e-4fbe-81cf-921391344ed1)
+
+
+![Ofast](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d2996d6d-c839-433d-af08-252c7ecc510f)
+
+
+![Ofast2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/ad7c893e-684a-4c38-83a6-3d23e7f02da3)
+
+
+![spike](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/69bcb558-0c87-40a6-b072-8c6d00585288)
+
+
+![debug](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/4a2d1c24-3c99-4417-95f5-e697ee1fa4fb)
+
+
+![debug2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/82dcd3ce-d026-40ac-bb54-fc85917bd691)
