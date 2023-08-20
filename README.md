@@ -26,3 +26,9 @@ C Program -> comipiled into assembly language -> Machine Language -> Execution/I
 4. Single & Double precision floating point extension RV64F & RV64D
 5. Application Binary Interface(ABI)
 6. Memory Allocation & Stack Pointer
+
+
+
+
+
+![lab1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/dc061fd3-aa77-43b7-a895-ec8ad269d913)
