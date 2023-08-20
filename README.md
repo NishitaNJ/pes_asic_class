@@ -27,8 +27,10 @@ C Program -> comipiled into assembly language -> Machine Language -> Execution/I
 5. Application Binary Interface(ABI)
 6. Memory Allocation & Stack Pointer
 
+## DAY1
 
+Write a C program to calculate sum of numbers from 1 to n.
 
-
+Compiling using C
 
 ![lab1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/dc061fd3-aa77-43b7-a895-ec8ad269d913)
