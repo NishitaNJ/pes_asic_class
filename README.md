@@ -225,5 +225,6 @@ The choice of the number of registers in a processor's architecture, such as the
 #### ABI Names
 ABI names for registers serve as a standardized way to designate the purpose and usage of specific registers within a software ecosystem. These names play a critical role in maintaining compatibility, optimizing code generation, and facilitating communication between different software components. 
 
-![blob:](https://web.whatsapp.com/6fb94fe2-9dea-4626-9a77-0aa567873265)
+<img width="430" alt="abitypes" src="https://github.com/NishitaNJ/pes_asic_class/assets/142140741/19861510-ed7c-41d5-99ae-cd6112ae61be">
+
 
