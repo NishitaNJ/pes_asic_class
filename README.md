@@ -227,4 +227,49 @@ ABI names for registers serve as a standardized way to designate the purpose and
 
 <img width="430" alt="abitypes" src="https://github.com/NishitaNJ/pes_asic_class/assets/142140741/19861510-ed7c-41d5-99ae-cd6112ae61be">
 
+# Labwork using ABI Function Calls
+## Algorithm for C Program using ASM
+- Incorporating assembly language code into a C program can be done using inline assembly or by linking separate assembly files with your C code.
+- When you call an assembly function from your C code, the C calling convention is followed, including pushing arguments onto the stack or passing them in registers as required.
+- The program executes the assembly function, following the assembly instructions you've provided.
+
+## Review ASM Function Calls
+- We wrote C code in one file and your assembly code in a separate file.
+- In the assembly file, we declared assembly functions with appropriate signatures that match the calling conventions of your platform.
+
+**C Program**
+
+
+
+**Asseembly File**
+
+## Simulate C Program using Function Call
+**Compilation:** To compile C code and Asseembly file use the command
+
+`riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o custom1to9.o custom1to9.c load.s` 
+
+this would generate object file `custom1to9.o`.
+
+**Execution:** To execute the object file run the command 
+
+`spike pk custom1to9.o`
+
+
+
+## Lab to Run C-Program on RISCV-CPU
+
+`git clone https://github.com/kunalg123/riscv_workshop_collaterals.git`
+
+`cd riscv_workshop_collaterals`
+
+`ls -ltr`
+
+`cd labs`
+
+`ls -ltr`
+
+`chmod 777 rv32im.sh`
+
+`./rv32im.sh`
+
 
