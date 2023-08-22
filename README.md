@@ -239,9 +239,11 @@ ABI names for registers serve as a standardized way to designate the purpose and
 
 **C Program**
 
-
+![customcode](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/23cc427e-63fe-4270-a4fe-39ca47c51da9)
 
 **Asseembly File**
+
+![customload](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/b7758c8e-380a-4eb7-a4d2-c566b25f228a)
 
 ## Simulate C Program using Function Call
 **Compilation:** To compile C code and Asseembly file use the command
@@ -254,7 +256,7 @@ this would generate object file `custom1to9.o`.
 
 `spike pk custom1to9.o`
 
-
+![customoutput](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/0c5cca82-634d-4c04-aeb3-65b302e9474a)
 
 ## Lab to Run C-Program on RISCV-CPU
 
@@ -272,9 +274,6 @@ this would generate object file `custom1to9.o`.
 
 `./rv32im.sh`
 
-
-![customcode](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/23cc427e-63fe-4270-a4fe-39ca47c51da9)
-![customload](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/b7758c8e-380a-4eb7-a4d2-c566b25f228a)
-![customoutput](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/0c5cca82-634d-4c04-aeb3-65b302e9474a)
 ![pic1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d5d01169-5433-4d0b-9f87-919c5decb1b9)
+
 ![pic2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/82703ec6-da83-42fa-a2f1-6546c54a917e)
