@@ -1,4 +1,6 @@
-# VLSI Physical Design for ASICs
+<details>
+  <summary> VLSI Physical Design for ASICs </summary>
+ 
 ## Objective
 This GitHub repository focuses on VLSI Physical Design for ASICs using open-source tools. The main objective is to convert a logical design description (RTL - Register Transfer Level) into a physical layout suitable for integrated circuit fabrication. This transformation ensures that the circuit's functional representation translates into a physical form that meets design constraints, performance goals, and manufacturability standards. The entire flow is carried out using open source tools which includes the RISCV toolchain.
 
@@ -277,3 +279,90 @@ this would generate object file `custom1to9.o`.
 ![pic1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d5d01169-5433-4d0b-9f87-919c5decb1b9)
 
 ![pic2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/82703ec6-da83-42fa-a2f1-6546c54a917e)
+
+
+</details>
+
+# RTL DESIGN USING VERILOG WITH SKY130 TECHNOLOGY
+## Objective
+The objective of this course is to provide us with a comprehensive understanding of RTL (Register Transfer Level) design principles using the Verilog Hardware Description Language within the context of Sky130 technology.
+## Table of Contents
++ Introduction to Verilog RTL Design and Synthesis
++ Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
++ Combinational and sequential optimizations
++ GLS Blocking vs non-blocking and synthesis-simulation mismatch
+## Skill Outcomes
+Upon completing this course, we will emerge with a robust skill set in RTL design using Verilog with a focus on Sky130 technology. We will comprehend the fundamental concepts of digital logic design, including combinational and sequential circuits, and be able to model complex behaviors using Verilog. Moreover, we will gain insights into the distinctive attributes of Sky130 technology, enabling them to optimize designs for performance and power. Through hands-on experience and troubleshooting exercises, we will have cultivated their practical problem-solving skills, ready to tackle real-world design challenges and lay the groundwork for advanced digital design pursuits.
+<details>
+  <summary>DAY1:Introduction to Verilog RTL Design and Synthesis</summary>
+  
+### Introduction to open-source simulator iverilog
+
+#### Introduction to iverilog design test bench:
+
+This introduction to Iverilog Design Test Bench delves into the principles of creating effective and comprehensive test benches using the Iverilog tool. Throughout this course, we learn how to construct simulation environments that rigorously exercise your digital designs, ensuring their functional correctness and reliability before actual hardware implementation.
+
+* Simulator: A simulator is a design used to check designs. The RTL design is actually the implementation of a spec. RTL design is checked for adherence to the spec by simulating the design. In this course we will be using iverilog simulator for simulating the design.
+
+* Testbench: A test bench is a simulation environment essential for validating digital designs. It tests the design's functionality by subjecting it to diverse input scenarios and comparing its outputs against expected results. Comprising stimulus generation and results verification components, the test bench generates inputs, monitors outputs, and uses assertions to pinpoint discrepancies. This proactive process uncovers errors before physical implementation, saving time and resources. Test benches help ensure accurate and robust digital systems, with tools like Iverilog serving as platforms for their creation and execution.
+
+* Design and testbench setup:
+
+![test_setup](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/24292d10-93ee-47ba-ada5-add469ede710)
+
+* iverilog based simulation flow:
+
+![simulation flow](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/65cd8ac7-ae40-4414-8228-5953de8a95b0)
+
+The Iverilog-based simulation flow employs the Iverilog simulator to validate digital designs described in Verilog. A Verilog description of the circuit and a separate test bench are created. After compilation, the simulator executes the simulation, evaluating signal values and logic computations over time. Recorded results are analyzed for correctness and discrepancies, aiding debugging and design refinement. Simulation reveals performance issues and guides optimization. This iterative process ensures design accuracy and reliability before physical implementation. Iverilog generates logs and reports, assisting in result interpretation and verification.
+
+### Lab using iverilog and gtkwave
+#### Introduction to lab:
+![pic2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/a6f0e729-7cc8-4326-8cad-d2db5353f815)
+![pic1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/6a7c4355-701c-49e6-96b5-74135f39c6a0)
+
+* `git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git` this particular code will allow us to git clone which will create a directory `sky130RTLDesignAndSynthesisWorkshop` which is used throughout this course.
+* `my_lib` contains all the library files.
+* `lib` contains the standard cell library which we use for synthesis.
+* `verilog_models` this contains all the standard cell verilog models.
+* `verilog_files` this contains all the source and testbench files.
+
+#### Introduction to iverilog gtkwave:
+
+![gtk1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9689473e-ea62-4841-ab47-8b4406fc34c6)
+
+* `verilog_files` contains all the design files.
+* `iverilog` is the command used used to load a design file. Here we are loading `iverilog good_mux.v tb_good_mux.v` where `tb_good_mux.v` is the testbench file.
+* This will create an output file, `a.out`
+* On executing, `./a.out` it will dump the vcd file.
+* Now this vcd file is loaded into simulator using the command `gtkwave`
+* `gtkwave tb_good_mux.vcd` this will give us the gtk wave form of the mux implemented in the file.
+![gtk2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/6bbc3e9e-80fc-48df-bee1-cc724398369c)
+* uut : unit under test
+* dut : design under test
+![gtk3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/e5583dd2-ee2c-4344-9dbb-b6df1a4fb52b)
+* This is the code written to implement a multiplexer.
+
+### Introduction to Yosys and logic synthesis
+#### Introduction to Yosys:
+* Yosys: Yosys is an open-source framework and toolchain for Verilog RTL synthesis. It offers a powerful set of tools for transforming high-level RTL code into a lower-level gate-level representation suitable for FPGA and ASIC implementations. Yosys provides an array of synthesis optimizations, technology mapping, and various analysis and transformation passes to enhance the efficiency and quality of synthesized designs. As a key player in the digital design and synthesis landscape, Yosys contributes to the development of efficient, reliable, and high-performance digital systems.
+* Yosys is a synthesizer used to convert RTL to netlist.
+![yosys flow](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/7608924b-e006-4479-837e-245d362dfb8b)
+* `read_verilog` : reads the command
+* `read_liberty` : reads the .lib file
+* `write_verilog` : writes the netlist
+* Netlist file is the representation of the design in the form of standard cells.
+
+![verify](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/1144e39e-2973-4158-b355-cb2b46f7849f)
+* Verification of Synthesized design: In order to make sure that there are no errors in the netlist, we'll have to verify the synthesized circuit.
+* The gtkwave output for the netlist should match the output waveform for the RTL design file. As netlist and design code have same set of inputs and outputs, we can use the same testbench and compare the waveforms.
+
+#### Introduction to logic synthesis:
+* Logic synthesis is a pivotal phase in digital circuit design that bridges the gap between high-level functional descriptions and the physical realization of a design. It involves the transformation of Register Transfer Level (RTL) representations, often described using hardware description languages like Verilog or VHDL, into a lower-level gate-level implementation. The goal of logic synthesis is to optimize the design for factors such as area, performance, and power consumption while maintaining its intended functionality. Through a series of transformations, logic synthesis generates a network of logic gates that implement the desired behavior, enabling efficient and accurate translation from abstract concepts to practical, implementable hardware.
+* RTL Design: RTL design, which stands for Register Transfer Level design, is a key methodology in digital circuit design where a digital system's behavior and functionality are described using a hardware description language (HDL) such as Verilog or VHDL. At the RTL level, the focus is on defining how data is transferred and manipulated between registers, representing the flow of information within the system. RTL design forms the basis for further stages of the design flow, including synthesis, simulation, and verification, enabling designers to architect complex digital systems with clarity and efficiency.
+* Synthesis flow: The synthesis flow in digital circuit design transforms an RTL description written in hardware description languages (HDL) like Verilog into a gate-level netlist suitable for hardware implementation. This involves logic synthesis, technology mapping, and optimization steps to optimize factors such as performance and power consumption. Timing analysis ensures that timing constraints are met, followed by gate-level simulation for validation. The flow culminates in generating output files used in subsequent implementation stages. This process is a pivotal bridge between high-level design and physical hardware realization.
+* A ".lib" file, also known as a library file, is a crucial component in digital circuit design that contains information about the characteristics and behavior of standard cells, macros, and other functional elements used in integrated circuits. These files store data such as timing information, power consumption, and logical functionality for various input conditions. The data is organized in tables, providing details on how these cells operate at different voltage, temperature, and load conditions. ".lib" files serve as a reference for synthesis, optimization, and other design processes, aiding in selecting the best components to implement a design while considering factors like speed, power, and area.
+* Why do we need deifferent flavors of gate?
+  Diverse gate flavors are essential in digital circuit design to cater to varying design objectives. These flavors, known as standard cells, address factors like speed, power consumption, and area efficiency. High-speed gates prioritize rapid signal propagation, low-power gates minimize energy use, and area-efficient gates reduce space requirements. In order to make a faster circuit, the clock frequency should be high. For that the time period of the clock should be as low as possible. However, in a sequential circuit, clock period depends on three factors so that data is not lost or to be glitch free.
+
+</details>
