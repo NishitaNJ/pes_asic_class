@@ -384,4 +384,11 @@ Selection of cells: The selection of cells, also known as standard cells, is a c
 Synthesis illustration:
 ![syn illustration](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/f29761ce-dae2-4ad7-a0ac-5bc56f64b80a)
 
+
+### Labs using Yosys and Sky130 PDKs
+**Invoking Yosys**
+* To invoke yosys type the command `yosys`
+![yosys](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c271c043-c692-4a68-bad4-75e4c2716ef7)
+
+
 </details>
