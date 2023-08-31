@@ -390,5 +390,21 @@ Synthesis illustration:
 * To invoke yosys type the command `yosys`
 ![yosys](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c271c043-c692-4a68-bad4-75e4c2716ef7)
 
+Reading the .lib, design files and choosing the module to synthesize.
+
+![yosys1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/66ac72ac-c6d6-4917-b335-0e63587f3b98)
+Generating Netlist:
+![yosys2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/7f0d7a8a-b45c-4829-bed0-9b89061dd3a6)
+![yosys3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/5e267d55-22a0-4561-8b5a-ff79633cf952)
+
+Synthesis results and synthesized circuit for multiplexer:
+![yosys4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/51c12634-2245-4f2e-9212-535f1ef4d5b8)
+
+Netlist code:
+![yosys5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/4c256bfd-ce29-48a9-a3dc-8b6f41ab154e)
+![yosys6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/25d1d34a-bfb8-44c7-82c6-d98d12320f90)
+![yosys7](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/f2aeaba7-038a-4466-91f0-46873d5ec7ec)
+![yosys8](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c563f936-4b77-4211-95d5-f98288f788b0)
+
 
 </details>
