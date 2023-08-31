@@ -412,6 +412,8 @@ Netlist code:
   
 ### Introduction to timing .libs:
 * To view the contents in the .lib
+![lib1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/b174a68f-3f35-4a07-808c-3b1def5ba788)
+
 
 * The first line in the file library ("sky130_fd_sc_hd__tt_025C_1v80")  :
 
@@ -420,6 +422,9 @@ Netlist code:
   + 1v80 : indicates the variations due to the voltage levels where the silicon will be incorporated.
 
 * It also displays the units of various parameters.
+![lib2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/79eb3909-22f6-4ccc-8c9f-d71e1e9ed184)
+
+
 * It gives the features of the cells
 
 * To enable line number `:se nu`
