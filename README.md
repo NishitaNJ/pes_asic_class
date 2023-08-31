@@ -406,5 +406,34 @@ Netlist code:
 ![yosys7](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/f2aeaba7-038a-4466-91f0-46873d5ec7ec)
 ![yosys8](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c563f936-4b77-4211-95d5-f98288f788b0)
 
+</details>
+<details>
+  <summary>DAY2:Timing libs, heirarchical vs flat synthesis and efficient flop coding styles</summary>
+  
+### Introduction to timing .libs:
+* To view the contents in the .lib
+
+* The first line in the file library ("sky130_fd_sc_hd__tt_025C_1v80")  :
+
+  + tt : indicates variations due to process and here it indicates Typical Process.
+  + 025C : indicates the variations due to temperatures where the silicon will be used.
+  + 1v80 : indicates the variations due to the voltage levels where the silicon will be incorporated.
+
+* It also displays the units of various parameters.
+* It gives the features of the cells
+
+* To enable line number `:se nu`
+
+* To view all the cells `:g//`
+
+* To view any instance `:/instance`
+
+* Since there are 5 inputs, for all the 32 possible combinations, it gives the delay, power and all the other parameters for each cell.
+
+* The below image shows the power consumption and area comparision.
+<img width="911" alt="lib3" src="https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9e538d6f-e72b-4dd3-bbc5-a65a3e6a5e29">
+
+
 
 </details>
+
