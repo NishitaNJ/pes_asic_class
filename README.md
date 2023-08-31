@@ -438,6 +438,25 @@ Netlist code:
 * The below image shows the power consumption and area comparision.
 <img width="911" alt="lib3" src="https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9e538d6f-e72b-4dd3-bbc5-a65a3e6a5e29">
 
+### Heirarchical vs Flat Synthesis:
+* Hierarchical Synthesis: Hierarchical synthesis is an approach in digital design and logic synthesis where complex designs are broken down into smaller, more manageable modules or sub-circuits, and each module is synthesized individually. These synthesized modules are then integrated back into the overall design hierarchy. This approach helps manage the complexity of large designs and allows designers to work on different parts of the design independently.
+
+* The file we used in this lab is `multiple_modules.v`
+
+  `cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+  `gvim multiple_modules.v`
+  
+<img width="321" alt="heir1" src="https://github.com/NishitaNJ/pes_asic_class/assets/142140741/3a6996f9-66e5-4155-b6d5-ee018334127c">
+
+* `multiple_modules` instantiates `sub_module1` and `sub_module2`
+
+* Launch `yosys`
+
+* read the library file `read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+
+* read the verilog file  `read_verilog multiple_modules.v`
+
+* `synth -top multiple_modules` to set it as top module
 
 
 </details>
