@@ -464,6 +464,7 @@ Netlist code:
 * `abc -liberty home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
 
 * To view the netlist `show multiple_modules`
+
 ![hier3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/fe53e3c2-e0be-47e7-8120-f37b13a47752)
 
 
@@ -482,7 +483,7 @@ Netlist code:
 ![flat1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/f2d3e82d-14fd-4d3a-a26d-a093dd91e915)
 ![flat2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8d732d7f-07fa-46ab-adc2-67825f3a18ae)
 
-*Synthesizing a submodule level:
+* Synthesizing a submodule level:
   + while synthesizing at a submodule level we see only a single sub module.
   + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `read_verilog multiple_modules.v`
