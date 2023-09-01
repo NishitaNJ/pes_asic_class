@@ -544,7 +544,8 @@ Netlist code:
     - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
     - `iverilog dff_asyncres.v tb_dff_asyncres.v`
     - `./a.out`
-    - `gtkwave tb_dff_asyncres.vcd`
+    -`gtkwave tb_dff_asyncres.vcd`
+  ![flop1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8997f306-4e52-4c45-aa61-4969b1743dae)
 
   + Synthesis
     - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
@@ -555,6 +556,7 @@ Netlist code:
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
+  ![flop4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/95b2a8d1-74fa-457f-af98-26d6c2c5a8e1)
 
 * D Flip_Flop with Asynchronous Set
   + Simulation
@@ -562,6 +564,7 @@ Netlist code:
     - `iverilog dff_async_set.v tb_dff_async_set.v`
     - `./a.out`
     - `gtkwave tb_dff_async_set.vcd`
+  ![flop2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9dcf3638-b91a-4f8c-85f6-58417587c99a)
 
   + Synthesis
     - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
@@ -572,6 +575,7 @@ Netlist code:
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
+  ![flop5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/1203c8fd-3a64-4794-b1a0-083bc80a3579)
 
 * D Flip-Flop with Synchronous Reset
   + Simulation
@@ -579,6 +583,7 @@ Netlist code:
     - `iverilog dff_syncres.v tb_dff_syncres.v`
     - `./a.out`
     - `gtkwave tb_dff_syncres.vcd`
+  ![flop3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/6a1d0345-d508-4733-b4fc-76ad10944059)
 
   + Synthesis
     - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
@@ -589,5 +594,9 @@ Netlist code:
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
+
+  ![flop6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/850b9c19-61f4-4378-94fc-5c3c5680a2f4)
+
+  
 </details>
 
