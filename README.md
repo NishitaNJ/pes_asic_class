@@ -538,6 +538,56 @@ Netlist code:
 
 ![dff4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/3f4ca6cb-4e78-4982-9155-0615b439ff20)
 
+#### Lab flop synthesis simulation:
+* D Flip-Flop with Asynchronous Reset
+  + Simulation
+    - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+    - `iverilog dff_asyncres.v tb_dff_asyncres.v`
+    - `./a.out`
+    - `gtkwave tb_dff_asyncres.vcd`
 
+  + Synthesis
+    - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_asyncres.v`
+    - `synth -top dff_asyncres`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
+
+* D Flip_Flop with Asynchronous Set
+  + Simulation
+    - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+    - `iverilog dff_async_set.v tb_dff_async_set.v`
+    - `./a.out`
+    - `gtkwave tb_dff_async_set.vcd`
+
+  + Synthesis
+    - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_async_set.v`
+    - `synth -top dff_async_set`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
+
+* D Flip-Flop with Synchronous Reset
+  + Simulation
+    - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+    - `iverilog dff_syncres.v tb_dff_syncres.v`
+    - `./a.out`
+    - `gtkwave tb_dff_syncres.vcd`
+
+  + Synthesis
+    - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_syncres.v`
+    - `synth -top dff_syncres`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
 </details>
 
