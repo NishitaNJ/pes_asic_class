@@ -642,4 +642,7 @@ Netlist code:
 ![io8](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8915f7c4-76ac-4c18-b343-ab325abb6dcb)
 
 </details>
+<details>
+  <summary>DAY3: Combinational and Sequential Optimizations</summary>
 
+</details>
