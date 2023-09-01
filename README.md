@@ -452,7 +452,7 @@ Netlist code:
 
 * Launch `yosys`
 
-* read the library file `read_liberty -lib home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+* read the library file `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
 
 * read the verilog file  `read_verilog multiple_modules.v`
 
@@ -474,6 +474,20 @@ Netlist code:
 ![hier4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9282ca70-193b-40a1-815f-a931c678c2c1)
 ![hier5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/580bcb0e-3a2a-4ecb-93f3-efc9eee1ce19)
 
+* Flat Synthesis: Flat synthesis refers to a design approach where the entire system is synthesized as a single, non-hierarchical entity, without breaking it down into smaller, interconnected modules or blocks. In this method, all components and their interconnections are synthesized together in a single flat structure.
+* To run flat synthesis type the command `flatten`
+* Then open the netlist:
+    + `write_verilog -noattr multiple_modules_flat.v`
+    + `!gvim multiple_modules_flat.v` this will generate the netlist.
+*Synthesizing a submodule level:
+  + while synthesizing at a submodule level we see only a single sub module.
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog multiple_modules.v`
+  + `synth -top sub_module1`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
+  + The below image consists of a single AND gate.
 
+* We use submodule level synthesis when we have multiple instances of the same module. This is generally used in cases where we have massive designs so that we get best optimized results.
 </details>
 
