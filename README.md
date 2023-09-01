@@ -544,7 +544,8 @@ Netlist code:
     - `cd /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
     - `iverilog dff_asyncres.v tb_dff_asyncres.v`
     - `./a.out`
-    -`gtkwave tb_dff_asyncres.vcd`
+    - `gtkwave tb_dff_asyncres.vcd`
+    
   ![flop1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8997f306-4e52-4c45-aa61-4969b1743dae)
 
   + Synthesis
@@ -556,6 +557,7 @@ Netlist code:
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
+    
   ![flop4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/95b2a8d1-74fa-457f-af98-26d6c2c5a8e1)
 
 * D Flip_Flop with Asynchronous Set
@@ -575,6 +577,7 @@ Netlist code:
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
+    
   ![flop5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/1203c8fd-3a64-4794-b1a0-083bc80a3579)
 
 * D Flip-Flop with Synchronous Reset
@@ -597,6 +600,30 @@ Netlist code:
 
   ![flop6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/850b9c19-61f4-4378-94fc-5c3c5680a2f4)
 
-  
+#### Interesting Optimizations:
+* `gvim mult_2.v`
+
+* `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+* `read_verilog mult_2.v`
+* `synth -top mul2`
+
+* `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+* `show`
+
+* `write_verilog -noattr mul2_netlist.v`
+* `!gvim mul2_netlist.v`
+
+* `gvim mult_8.v`
+
+* `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`  
+* `read_verilog mult_8.v`
+* `synth -top mult8`
+
+* `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+* `show`
+
+* `write_verilog -noattr mult8_netlist.v`
+* `!gvim mult8_netlist.v`
+
 </details>
 
