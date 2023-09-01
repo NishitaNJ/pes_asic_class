@@ -513,15 +513,21 @@ Netlist code:
   + Else, on the positive edge of the clock, the stored value is updated at the output.
   + `gvim dff_asyncres_syncres.v`
 
+![dff1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/a7b6ed2c-0e0e-4790-87de-e286c0e54de6)
+
 * D Flip_Flop with Asynchronous Set
   + When the set is high, the output of the flip-flop is forced to 1, irrespective of the clock signal.
   + Else, on positive edge of the clock, the stored value is updated at the output.
   + `gvim dff_async_set.v`
 
+![dff2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c120a2a0-00fa-4e70-8d02-5ece3c9b24b0)
+
 * D Flip-Flop with Synchronous Reset
   + When the reset is high on the positive edge of the clock, the output of the flip-flop is forced to 0.
   + Else, on the positive edge of the clock, the stored value is updated at the output.
   + `gvim dff_syncres.v`
+
+![dff3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/93fd1826-631c-4f08-bb3b-59bb16e0fa77)
 
 * D Flip-Flop with Asynchronous Reset and Synchronous Reset
   + When the asynchronous resest is high, the output is forced to 0.
@@ -530,6 +536,7 @@ Netlist code:
   + Here, it is a combination of both synchronous and asynchronous reset DFF.
   + `gvim dff_asyncres_syncres.v`
 
+![dff4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/3f4ca6cb-4e78-4982-9155-0615b439ff20)
 
 
 </details>
