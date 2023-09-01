@@ -603,27 +603,43 @@ Netlist code:
 #### Interesting Optimizations:
 * `gvim mult_2.v`
 
+![io1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/4af49b93-384a-486e-a51c-39a50b5d5cae)
+
 * `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
 * `read_verilog mult_2.v`
 * `synth -top mul2`
 
+![io2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/fec19b12-1248-4c88-ba55-0bda7c337e87)
+
 * `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
 * `show`
+
+![io3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/0f86155e-7573-481a-b122-94234c81f8cd)
 
 * `write_verilog -noattr mul2_netlist.v`
 * `!gvim mul2_netlist.v`
 
+![io4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/bdc9c818-1726-49d6-a20e-1c301e967e5a)
+
 * `gvim mult_8.v`
+
+![io5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/f61918bf-cf4d-4b8f-8684-5617545f8095)
 
 * `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`  
 * `read_verilog mult_8.v`
 * `synth -top mult8`
 
+![io6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9b412e4f-bdc1-4275-99fd-9a692d008c13)
+
 * `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
 * `show`
 
+![io7](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/2c6acdd5-c3e2-42cd-8ec4-1ac1d01b28c4)
+
 * `write_verilog -noattr mult8_netlist.v`
 * `!gvim mult8_netlist.v`
+
+![io8](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8915f7c4-76ac-4c18-b343-ab325abb6dcb)
 
 </details>
 
