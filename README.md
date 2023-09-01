@@ -491,6 +491,7 @@ Netlist code:
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
   + The below image consists of a single AND gate.
+
 ![flat3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/a474a620-5b9f-494b-a96a-f639913df86a)
 
 * We use submodule level synthesis when we have multiple instances of the same module. This is generally used in cases where we have massive designs so that we get best optimized results.
