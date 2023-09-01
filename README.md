@@ -496,6 +496,41 @@ Netlist code:
 
 * We use submodule level synthesis when we have multiple instances of the same module. This is generally used in cases where we have massive designs so that we get best optimized results.
 
+### Various Flop coding styles and optimization:
+#### Why Flops and flop coding styles:
+* Flip-flops are crucial in digital system design as they serve as the backbone for storing binary states, synchronized to clock signals. They enable sequential logic, memory storage, control signal generation, and timing control in digital systems. Flip-flops play a vital role in isolating clock domains, meeting timing constraints, and ensuring testability. Overall, they are fundamental components that enable the reliable and synchronized operation of digital systems, making them indispensable in modern digital design.
+* A flip-flop (often abbreviated as "flop") is a fundamental building block in digital circuit design.
+* It's a type of sequential logic element that stores binary information (0 or 1) and can change its output based on clock signals and input values.
+* In a combinational circuit, the output changes after the propagation delay of the circuit once inputs are changed.
+* During the propagation of data, if there are different paths with different propagation delays, then a glitch might occur.
+* There will be multiple glitches for multiple combinational circuits.
+* Hence, we need flops to store the data from the combinational circuits.
+* When a flop is used, the output of combinational circuit is stored in it and it is propagated only at the posedge or negedge of the clock so that the next combinational circuit gets a glitch free input thereby stabilising the output.
+* We use control pins like set and reset to initialise the flops.
+* They can be synchronous and asynchronous.
+* D Flip-Flop with Asynchronous Reset
+  + When the reset is high, the output of the flip-flop is forced to 0, irrespective of the clock signal.
+  + Else, on the positive edge of the clock, the stored value is updated at the output.
+  + `gvim dff_asyncres_syncres.v`
+
+* D Flip_Flop with Asynchronous Set
+  + When the set is high, the output of the flip-flop is forced to 1, irrespective of the clock signal.
+  + Else, on positive edge of the clock, the stored value is updated at the output.
+  + `gvim dff_async_set.v`
+
+* D Flip-Flop with Synchronous Reset
+  + When the reset is high on the positive edge of the clock, the output of the flip-flop is forced to 0.
+  + Else, on the positive edge of the clock, the stored value is updated at the output.
+  + `gvim dff_syncres.v`
+
+* D Flip-Flop with Asynchronous Reset and Synchronous Reset
+  + When the asynchronous resest is high, the output is forced to 0.
+  + When the synchronous reset is high at the positive edge of the clock, the output is forced to 0.
+  + Else, on the positive edge of the clock, the stored value is updated at the output.
+  + Here, it is a combination of both synchronous and asynchronous reset DFF.
+  + `gvim dff_asyncres_syncres.v`
+
+
 
 </details>
 
