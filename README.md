@@ -457,15 +457,23 @@ Netlist code:
 * read the verilog file  `read_verilog multiple_modules.v`
 
 * `synth -top multiple_modules` to set it as top module
+![hier1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d218b9c7-c86d-43af-a770-244bf9275c80)
+![hier2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9191d849-f1bb-4ffd-bbaa-96f089e45a11)
+
 
 * `abc -liberty home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
 
 * To view the netlist `show multiple_modules`
+![hier3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/fe53e3c2-e0be-47e7-8120-f37b13a47752)
+
 
 * Here it shows `sub_module1` and `sub_module2` instead of AND gate and OR gate.
 * `write_verilog -noattr multiple_modules_hier.v`
 * `!gvim multiple_modules_hier.v`
 * These commands will generate the netlist.
+![hier4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/9282ca70-193b-40a1-815f-a931c678c2c1)
+![hier5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/580bcb0e-3a2a-4ecb-93f3-efc9eee1ce19)
+
 
 </details>
 
