@@ -479,6 +479,9 @@ Netlist code:
 * Then open the netlist:
     + `write_verilog -noattr multiple_modules_flat.v`
     + `!gvim multiple_modules_flat.v` this will generate the netlist.
+![flat1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/f2d3e82d-14fd-4d3a-a26d-a093dd91e915)
+![flat2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8d732d7f-07fa-46ab-adc2-67825f3a18ae)
+
 *Synthesizing a submodule level:
   + while synthesizing at a submodule level we see only a single sub module.
   + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
@@ -487,7 +490,10 @@ Netlist code:
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
   + The below image consists of a single AND gate.
+![flat3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/a474a620-5b9f-494b-a96a-f639913df86a)
 
 * We use submodule level synthesis when we have multiple instances of the same module. This is generally used in cases where we have massive designs so that we get best optimized results.
+
+
 </details>
 
