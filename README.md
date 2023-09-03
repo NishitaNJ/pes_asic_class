@@ -1025,14 +1025,14 @@ Netlist code:
 * blocking_caveat
   + Opening the file: `gvim blocking_caveat.v`
  
-  
+  ![ss1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/32f2e835-e5ae-45f6-9e33-80b7933b2a10)
 
   + Simulation:
     - `iverilog blocking_caveat.v tb_blocking_caveat.v`
     - `./a.out` : this will generate a .vcd file
     - `gtkwave tb_blocking_caveat.vcd` : this will give us the gtk wavform.
    
-    
+    ![ss2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/030f1034-cf00-4f26-871b-f524c867759a)
 
   + Synthesis:
     - Invoke `yosys`
@@ -1040,16 +1040,19 @@ Netlist code:
     - `read_verilog blocking_caveat.v`
     - `synth -top blocking_caveat`
    
-    
+    ![ss3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/df18e921-ec94-4375-9eb9-4fdbc575f515)
 
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `write_verilog blocking_caveat_net.v`
     - `show`
    
-    
+    ![ss4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/7bb667ef-3a0a-4745-8c1a-bf8416e2ab5f)
 
   + GLS:
     - `iverilog /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v`
     - `./a.out`
     - `gtkwave tb_blocking_caveat.vcd`
+   
+    ![ss5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/7dd54569-86f0-4bf4-b33b-40c2273e18ff)
+
 </details>
