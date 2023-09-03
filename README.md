@@ -757,77 +757,133 @@ Netlist code:
 ### Sequential Logic Optimizations:
 * dff_const1
   + `gvim dff_const1.v`
+  
+  ![sl1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/a074ee61-8414-490d-bfc5-637c9cfbe364)
+
   + Simulation:
     - `iverilog dff_const1.v tb_dff_const1.v`
     - `./a.out`
     - `gtkwave tb_dff_const1.vcd`
+
+    ![sl2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/3939d23b-587e-42b9-8486-4952ad02c270)
+
   + Synthesis:
     - `yosys`
     - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `read_verilog dff_const1.v`
     - `synth -top dff_const1`
+    
+    ![sl3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/2ba27f98-9c07-4318-8f86-779f123eb867)
+
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
 
+    ![sl4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/ba4628ae-a159-48d1-be5b-b120096e7e7e)
+
 * dff_const2
   + `gvim dff_const2.v`
+ 
+  ![sl5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/4e2298fb-991e-49e0-a753-827ac3a5229e)
+
   + Simulation:
     - `iverilog dff_const2.v tb_dff_const2.v`
     - `./a.out`
     - `gtkwave tb_dff_const2.vcd`
+   
+    ![sl6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/dbb9cdb3-44b5-4abc-a484-fdde4c4570a6)
+
   + Synthesis:
     - `yosys`
     - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `read_verilog dff_const2.v`
     - `synth -top dff_const2`
+    
+    ![sl7](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/a06284c4-f099-4991-86e1-930b03f857db)
+
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
 
+    ![sl8](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/637246e0-b443-4bfd-a0b0-e8291a989d75)
+
 * dff_const3
   + `gvim dff_const3.v`
+
+  ![sl9](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c76a428c-0c55-4de2-9095-a2af80d08ca2)
+
   + Simulation:
     - `iverilog dff_const3.v tb_dff_const3.v`
     - `./a.out`
     - `gtkwave tb_dff_const3.vcd`
+   
+    ![sl10](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/75052408-1ecd-49b2-bd07-9fac380bdeee)
+
   + Synthesis:
     - `yosys`
     - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `read_verilog dff_const3.v`
     - `synth -top dff_const3`
+   
+    ![sl11](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/e5293aa8-f197-4de3-9275-629730ec353e)
+
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
+   
+    ![sl12](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/2e08c075-6412-49b8-a083-15c020832788)
 
 * dff_const4
   + `gvim dff_const4.v`
+ 
+  ![sl13](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/1d3d1d9b-2d7b-4d6e-b6ec-1958ca8a84df)
+
   + Simulation:
     - `iverilog dff_const4.v tb_dff_const4.v`
     - `./a.out`
     - `gtkwave tb_dff_const4.vcd`
+   
+    ![sl14](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/ed99d956-bc88-42c4-baec-85ea8841f05b)
+
   + Synthesis:
     - `yosys`
     - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `read_verilog dff_const4.v`
     - `synth -top dff_const4`
+   
+    ![sl15](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/191afb02-8cd0-4dc7-85a3-ad23e0ad3d47)
+
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
 
+    ![sl16](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/1e513264-da58-41e7-8fb5-fb5d4b8fec94)
+
 * dff_const5
   + `gvim dff_const5.v`
+
+  ![sl17](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/96a126e7-0d81-4719-9eed-b975430aca35)
+
   + Simulation:
     - `iverilog dff_const5.v tb_dff_const5.v`
     - `./a.out`
     - `gtkwave tb_dff_const5.vcd`
+   
+    ![sl18](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/b8e9126b-7ee2-48ca-986c-4e3820df7455)
+
   + Synthesis:
     - `yosys`
     - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `read_verilog dff_const5.v`
     - `synth -top dff_const5`
+ 
+    ![sl19](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c8426bab-9f86-45bb-b18e-45f34b08a317)
+
     - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `show`
+
+    ![sl20](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d3ffaa60-f9c9-4c01-a7f6-9c8dea8b52ea)
+
 
 </details>
