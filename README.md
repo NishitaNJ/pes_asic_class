@@ -885,5 +885,24 @@ Netlist code:
 
     ![sl20](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d3ffaa60-f9c9-4c01-a7f6-9c8dea8b52ea)
 
+### Sequential optimizations for unused outputs:
+* counter_opt
+  + `gvim counter_opt.v`
+  + `yosys`
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog counter_opt.v`
+  + `synth -top counter_opt`
+  + `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
 
+* counter_opt2
+  + `gvim counter_opt2.v`
+  + `yosys`
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog counter_opt2.v`
+  + `synth -top counter_opt`
+  + `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
 </details>
