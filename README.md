@@ -644,5 +644,73 @@ Netlist code:
 </details>
 <details>
   <summary>DAY3: Combinational and Sequential Optimizations</summary>
+  
+### Introduction to Optimizations:
+
+* In digital logic there are two types of logic: Combinational and Sequential logic.
+* Combinational logic: Combinational logic plays a fundamental role in digital system design, providing the foundation for the manipulation and processing of binary data. It consists of logic gates, such as AND, OR, and NOT gates, which are interconnected to perform specific functions based solely on the current input values, with no memory of past inputs.
+  + Combinatinal logics are used mainly to squeez the logic to get the most optimized results.
+  + Techniques for optimization:
+    - Constant propagation in combinational logic design refers to the process of identifying and utilizing constant values within a combinational logic circuit to optimize its performance and reduce complexity. This technique is primarily used to streamline the circuit's operation by eliminating unnecessary logic gates and signal paths. This is a direct optimization technique.
+    - Boolean logic optimization refers to the process of simplifying Boolean expressions and logic circuits to achieve specific objectives such as reducing gate count, minimizing propagation delays, and improving overall circuit performance.
+* Sequential logic: Sequential logic is an integral component of digital system designs, serving as the foundation for creating systems that can process and store data over time. Unlike combinational logic, which relies solely on present inputs to generate outputs, sequential logic incorporates memory elements like flip-flops and registers to retain and manage past states.
+  + Techniques for Optimization:
+    - Basic:
+      + Sequential Constant Propagation: Sequential constant propagation is an optimization technique used in digital system design, particularly in the context of sequential logic circuits. It builds upon the concept of constant propagation, which identifies and replaces variables or expressions with constant values during compilation or design.
+    - Advanced:
+      + State Optimization: State optimization, also known as state minimization or state reduction, is an optimization technique used in digital design to reduce the number of states in finite state machines (FSMs) while preserving the original functionality.
+      + Retiming: Retiming is an optimization technique used in sequential logic design to improve the performance of digital circuits by strategically rearranging the placement of flip-flops (registers) without altering the functionality of the circuit. The primary goal of retiming is to minimize critical path delays, thereby enhancing the circuit's speed and meeting timing requirements.
+      + Sequential logic cloning: Sequential logic cloning, also known as retiming-based cloning or register cloning, is a technique used in digital design to improve the performance of a circuit by duplicating or cloning existing registers (flip-flops) and introducing additional pipeline stages. This technique aims to balance the critical paths within a circuit and reduce its overall clock period, leading to improved timing performance and better overall efficiency.
+
+### Combinational logic optimizations:
+* opt_check
+  + `gvim opt_check.v`
+  + `yosys`
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog opt_check.v`
+  + `synth -top opt_check`
+  + `opt_clean -purge`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
+
+* opt_check2
+  + `gvim opt_check2.v`
+  + `yosys`
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog opt_check2.v`
+  + `synth -top opt_check2`
+  + `opt_clean -purge`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
+
+* opt_check3
+  + `gvim opt_check3.v`
+  + `yosys`
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog opt_check3.v`
+  + `synth -top opt_check3`
+  + `opt_clean -purge`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
+
+* opt_check4
+  + `gvim opt_check4.v`
+  + `yosys`
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog opt_check4.v`
+  + `synth -top opt_check4`
+  + `opt_clean -purge`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
+
+* multiple_module_opt
+  + `gvim multiple_module_opt.v`
+  + `yosys`
+  + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `read_verilog multiple_module_opt.v`
+  + `synth -top multiple_module_opt`
+  + `opt_clean -purge`
+  + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+  + `show`
 
 </details>
