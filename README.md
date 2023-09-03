@@ -956,39 +956,68 @@ Netlist code:
 ### Labs on GLS and Synthesis-Simulation mismatch:
 * ternary_operator_mux
   + Opening the file: `gvim ternary_operator_mux.v`
+ 
+  ![gls1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/e249394c-4af5-4473-bbac-52984f0b2aa5)
+
   + Simulation:
     - `iverilog ternary_operator_mux.v tb_ternary_operator_mux.v`
     - `./a.out` : this will generate a .vcd file
     - `gtkwave tb_ternary_operator_mux.vcd` : this will give us the gtk wavform.
+   
+    ![gls2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/af9ea4fe-88cd-4b3d-b711-d7977e909b1a)
+
   + Synthesis:
     - Invoke `yosys`
     - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `read_verilog ternary_operator_mux.v`
     - `synth -top ternary_operator_mux`
+   
+    ![gls3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/84b6dde2-2a7f-4a19-8a76-30771b44fad3)
+
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `write_verilog ternary_operator_mux_net.v`
     - `show`
+   
+    ![gls4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/6288d9d9-1d02-44d7-9886-3c6f786fa008)
+
   + GLS:
     - `iverilog /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v`
     - `./a.out`
     - `gtkwave tb_ternary_operator_mux.vcd`
 
+    ![gls5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/18e46b5b-74e6-47dd-9fb6-3ea3b8af066e)
+
 * bad_mux
   + Opening the file: `gvim bad_mux.v`
+ 
+  ![gls6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/86f71c4c-d6eb-48f2-a5e9-eab5241e5c29)
+
   + Simulation:
     - `iverilog bad_mux.v tb_bad_mux.v`
     - `./a.out` : this will generate a .vcd file
     - `gtkwave tb_bad_mux.vcd` : this will give us the gtk wavform.
+   
+    ![gls7](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8b315fca-5c07-4916-b9bf-4b8ee7669271)
+
   + Synthesis:
     - Invoke `yosys`
     - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `read_verilog bad_mux.v`
     - `synth -top bad_mux`
+   
+    ![gls8](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8d293be1-b0dc-4619-ae03-37e189685621)
+
     - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
     - `write_verilog bad_mux_net.v`
     - `show`
+   
+    ![gls9](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/8323a8dd-5964-4645-b68f-5d160157547f)
+
   + GLS:
     - `iverilog /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v`
     - `./a.out`
     - `gtkwave tb_bad_mux.vcd`
+   
+    ![gls10](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d6f28444-4346-4101-bd69-892c43427b93)
+
 </details>
