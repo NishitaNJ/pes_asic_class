@@ -1020,4 +1020,36 @@ Netlist code:
    
     ![gls10](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d6f28444-4346-4101-bd69-892c43427b93)
 
+### Labs on synthesis-simulation mismatch for blocking statements:
+
+* blocking_caveat
+  + Opening the file: `gvim blocking_caveat.v`
+ 
+  
+
+  + Simulation:
+    - `iverilog blocking_caveat.v tb_blocking_caveat.v`
+    - `./a.out` : this will generate a .vcd file
+    - `gtkwave tb_blocking_caveat.vcd` : this will give us the gtk wavform.
+   
+    
+
+  + Synthesis:
+    - Invoke `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog blocking_caveat.v`
+    - `synth -top blocking_caveat`
+   
+    
+
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `write_verilog blocking_caveat_net.v`
+    - `show`
+   
+    
+
+  + GLS:
+    - `iverilog /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v`
+    - `./a.out`
+    - `gtkwave tb_blocking_caveat.vcd`
 </details>
