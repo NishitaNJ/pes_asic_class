@@ -747,10 +747,13 @@ Netlist code:
     
   ![cl14](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/0b021821-d11b-4404-b4ab-0663f633487b)
 
+  + `flatten`
   + `opt_clean -purge`
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
-    
-  ![cl15](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/18246d66-b776-4574-95d0-a93e4a50a499)
+  
+  ![cl16](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/3c7e1f78-7174-45e6-9fa5-b185d3d4f9fa)
+
+  
 
 </details>
