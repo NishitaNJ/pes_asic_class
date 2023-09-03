@@ -754,6 +754,80 @@ Netlist code:
   
   ![cl16](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/3c7e1f78-7174-45e6-9fa5-b185d3d4f9fa)
 
-  
+### Sequential Logic Optimizations:
+* dff_const1
+  + `gvim dff_const1.v`
+  + Simulation:
+    - `iverilog dff_const1.v tb_dff_const1.v`
+    - `./a.out`
+    - `gtkwave tb_dff_const1.vcd`
+  + Synthesis:
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_const1.v`
+    - `synth -top dff_const1`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
+
+* dff_const2
+  + `gvim dff_const2.v`
+  + Simulation:
+    - `iverilog dff_const2.v tb_dff_const2.v`
+    - `./a.out`
+    - `gtkwave tb_dff_const2.vcd`
+  + Synthesis:
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_const2.v`
+    - `synth -top dff_const2`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
+
+* dff_const3
+  + `gvim dff_const3.v`
+  + Simulation:
+    - `iverilog dff_const3.v tb_dff_const3.v`
+    - `./a.out`
+    - `gtkwave tb_dff_const3.vcd`
+  + Synthesis:
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_const3.v`
+    - `synth -top dff_const3`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
+
+* dff_const4
+  + `gvim dff_const4.v`
+  + Simulation:
+    - `iverilog dff_const4.v tb_dff_const4.v`
+    - `./a.out`
+    - `gtkwave tb_dff_const4.vcd`
+  + Synthesis:
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_const4.v`
+    - `synth -top dff_const4`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
+
+* dff_const5
+  + `gvim dff_const5.v`
+  + Simulation:
+    - `iverilog dff_const5.v tb_dff_const5.v`
+    - `./a.out`
+    - `gtkwave tb_dff_const5.vcd`
+  + Synthesis:
+    - `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog dff_const5.v`
+    - `synth -top dff_const5`
+    - `dfflibmap -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `show`
 
 </details>
