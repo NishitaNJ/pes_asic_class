@@ -923,3 +923,72 @@ Netlist code:
   ![slu6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/1ba80f4b-2475-473b-83d7-a5b18fd6bb22)
 
 </details>
+
+<details>
+  <summary>DAY4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch</summary>
+
+### GLS, Synthesis-Simulation mistmatch and blocking vs non-blocking statements:
+* GLS: Gate Level Simulation
+  + Gate-level simulation in digital system design refers to the process of simulating and analyzing the behavior of a digital system at the level of individual logic gates and flip-flops.
+  + It involves modeling the logical and timing characteristics of these fundamental building blocks to verify the correctness, functionality, and timing constraints of the digital circuit.
+  + This type of simulation is typically performed after the logic synthesis process, where a high-level description of the design is transformed into a netlist of gates and flip-flops.
+  + We perform this to verify logical correctness of the design after synthesizing it. Also ensuring the timing of the design is met.
+  
+![GLS](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/985195a4-3238-4b29-9d2c-13696631d369)
+
+* Synthesis-Simulation mismatch:
+  + Synthesis simulation mismatch refers to discrepancies that can arise between the results of two crucial stages in digital design: synthesis and simulation. During synthesis, a high-level design description is transformed into a gate-level representation. Simulation then verifies the design's correctness. Mismatch issues can include timing errors, functional discrepancies, and optimization effects introduced during synthesis that affect simulation results.
+  + This mismatch is a critical concern in digital design because it indicates that the actual hardware implementation might not perform as expected, potentially leading to functional or timing failures in the fabricated chip.
+* Blocking and non-blocking statements:
+  + Blocking statement: Blocking statements are executed sequentially in the order they appear in the code and have an immediate effect on signal assignments.
+  + Non-blocking statement: Non-blocking assignments are used to model concurrent signal updates, where all assignments are evaluated simultaneously and then scheduled to be updated at the end of the time step.
+  + Caveat with blocking statements:
+    - Procedural Execution: Blocking statements are executed sequentially in the order they appear within a procedural block (such as an always block). This can lead to unexpected behavior if the order of execution matters and is not well understood.
+    - Lack of Parallelism: Blocking statements do not accurately represent the parallel nature of hardware. In hardware, multiple signals can update concurrently, but blocking statements model sequential behavior. As a result, using blocking statements for modeling complex concurrent logic can lead to incorrect simulations.
+    - Race Conditions: When multiple blocking assignments operate on the same signal within the same procedural block, a race condition can occur. The outcome of such assignments depends on their order of execution, which might lead to inconsistent or unpredictable behavior.
+    - Limited Representation of Hardware: Hardware systems are inherently concurrent and parallel, but blocking statements do not capture this aspect effectively. Using blocking assignments to model complex combinational or sequential logic can lead to models that are difficult to understand, maintain, and debug.
+    - Combinatorial Loops: Incorrect use of blocking statements can lead to unintentional combinational logic loops, which can result in simulation or synthesis errors.
+    - Debugging Challenges: Debugging code with many blocking assignments can be challenging, especially when trying to track down timing-related issues.
+    - Not Suitable for Flip-Flops: Blocking assignments are not suitable for modeling flip-flop behavior. Non-blocking assignments (<=) are generally preferred for modeling flip-flop updates to ensure accurate representation of concurrent behavior.
+    - Sequential Logic Misrepresentation: Using blocking assignments to model sequential logic might not capture the intended behavior accurately. Sequential elements like registers and flip-flops are better represented using non-blocking assignments.
+    - Synthesis Implications: The behavior of blocking assignments might not translate well during synthesis, leading to potential mismatches between simulation and synthesis results.
+
+### Labs on GLS and Synthesis-Simulation mismatch:
+* ternary_operator_mux
+  + Opening the file: `gvim ternary_operator_mux.v`
+  + Simulation:
+    - `iverilog ternary_operator_mux.v tb_ternary_operator_mux.v`
+    - `./a.out` : this will generate a .vcd file
+    - `gtkwave tb_ternary_operator_mux.vcd` : this will give us the gtk wavform.
+  + Synthesis:
+    - Invoke `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog ternary_operator_mux.v`
+    - `synth -top ternary_operator_mux`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `write_verilog ternary_operator_mux_net.v`
+    - `show`
+  + GLS:
+    - `iverilog /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v`
+    - `./a.out`
+    - `gtkwave tb_ternary_operator_mux.vcd`
+
+* bad_mux
+  + Opening the file: `gvim bad_mux.v`
+  + Simulation:
+    - `iverilog bad_mux.v tb_bad_mux.v`
+    - `./a.out` : this will generate a .vcd file
+    - `gtkwave tb_bad_mux.vcd` : this will give us the gtk wavform.
+  + Synthesis:
+    - Invoke `yosys`
+    - `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `read_verilog bad_mux.v`
+    - `synth -top bad_mux`
+    - `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+    - `write_verilog bad_mux_net.v`
+    - `show`
+  + GLS:
+    - `iverilog /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/primitives.v /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v`
+    - `./a.out`
+    - `gtkwave tb_bad_mux.vcd`
+</details>
