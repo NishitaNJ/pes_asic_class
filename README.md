@@ -665,52 +665,92 @@ Netlist code:
 ### Combinational logic optimizations:
 * opt_check
   + `gvim opt_check.v`
+    
+  ![cl1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c67a165a-b4ff-436d-ab71-0c54fe9a0656)
+
   + `yosys`
   + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `read_verilog opt_check.v`
   + `synth -top opt_check`
+    
+  ![cl2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/1987e20d-b024-41d4-a85b-9ad518d828f6)
+
   + `opt_clean -purge`
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
+    
+  ![cl3](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c05eb102-0bbf-408b-a246-1664da7e1538)
 
 * opt_check2
   + `gvim opt_check2.v`
+    
+  ![cl4](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/009a4cd1-2fcd-44e8-9466-ac1e927662bd)
+
   + `yosys`
   + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `read_verilog opt_check2.v`
   + `synth -top opt_check2`
+    
+  ![cl5](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/cc39ea28-d4e8-4dec-b29c-faa12fb16bdd)
+
   + `opt_clean -purge`
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
+    
+  ![cl6](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/c0fabba9-7319-4647-bb0f-e65dd79c3647)
 
 * opt_check3
   + `gvim opt_check3.v`
+    
+  ![cl7](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/996eb194-f218-4fca-a371-f7d2d579d7a2)
+
   + `yosys`
   + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `read_verilog opt_check3.v`
   + `synth -top opt_check3`
+    
+  ![cl8](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/6cc3d5da-f91a-48f8-937d-700dfd4e4529)
+
   + `opt_clean -purge`
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
+    
+  ![cl9](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/43379af7-d030-46b2-ae47-d13d7a64239d)
 
 * opt_check4
   + `gvim opt_check4.v`
+    
+  ![cl10](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/88eebe0a-98e0-4621-8920-1ad48c6cf30a)
+
   + `yosys`
   + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `read_verilog opt_check4.v`
   + `synth -top opt_check4`
+    
+  ![cl11](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d47c28c2-b8c8-4754-8bde-0f16cc87bcc3)
+
   + `opt_clean -purge`
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
+    
+  ![cl12](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/12e6a51c-5e44-4bb4-86d0-996fe4d1f083)
 
 * multiple_module_opt
   + `gvim multiple_module_opt.v`
+    
+  ![cl13](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/5f2e1e68-8951-4b52-b9b2-d4efbfdea5c7)
+
   + `yosys`
   + `read_liberty -lib /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `read_verilog multiple_module_opt.v`
   + `synth -top multiple_module_opt`
+    
+  ![cl14](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/0b021821-d11b-4404-b4ab-0663f633487b)
+
   + `opt_clean -purge`
   + `abc -liberty /home/nishita_joshi/VLSI/sky130RTLDesignAndSynthesisWorkshop/lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
   + `show`
+    
+  ![cl15](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/18246d66-b776-4574-95d0-a93e4a50a499)
 
 </details>
