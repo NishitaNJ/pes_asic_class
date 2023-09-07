@@ -1,5 +1,4 @@
-<details>
-  <summary> VLSI Physical Design for ASICs </summary>
+# VLSI Physical Design for ASICs
  
 ## Objective
 This GitHub repository focuses on VLSI Physical Design for ASICs using open-source tools. The main objective is to convert a logical design description (RTL - Register Transfer Level) into a physical layout suitable for integrated circuit fabrication. This transformation ensures that the circuit's functional representation translates into a physical form that meets design constraints, performance goals, and manufacturability standards. The entire flow is carried out using open source tools which includes the RISCV toolchain.
@@ -42,6 +41,10 @@ This GitHub repository focuses on VLSI Physical Design for ASICs using open-sour
   - [Algorithm for C Program using ASM](#algorithm-for-c-program-using-asm)
   - [Review ASM Function Calls](#review-asm-function-calls)
   - [Simulate C Program using Function Call](#simulate-c-program-using-function-call)
+
+<details>
+  <summary>Day1: Introduction to Risc-V ISA and GNU Compiler Toolchain</summary>
+
 # Introduction to Basic Keywords
 ## Introduction
 - **ISA (Instruction Set Archhitecture)**
@@ -181,6 +184,10 @@ We wrote a C program that shows the maximum and minimum values of 64bit signed n
 ![correctcode](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/f2782b40-cfd3-4659-850f-af0c91b6287f)
 
 ![correctsign](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/e36d8e8a-5351-485b-a3c3-c8faddaef8e0)
+</details>
+
+<details>
+  <summary>Day2: Introduction to ABI and Basic Verification Flow</summary>
 
 # Application Binary Interface
 ## Introduction to ABI
@@ -279,22 +286,46 @@ this would generate object file `custom1to9.o`.
 ![pic1](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/d5d01169-5433-4d0b-9f87-919c5decb1b9)
 
 ![pic2](https://github.com/NishitaNJ/pes_asic_class/assets/142140741/82703ec6-da83-42fa-a2f1-6546c54a917e)
-
-
 </details>
 
 # RTL DESIGN USING VERILOG WITH SKY130 TECHNOLOGY
 ## Objective
 The objective of this course is to provide us with a comprehensive understanding of RTL (Register Transfer Level) design principles using the Verilog Hardware Description Language within the context of Sky130 technology.
 ## Table of Contents
-+ Introduction to Verilog RTL Design and Synthesis
-+ Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
-+ Combinational and sequential optimizations
-+ GLS Blocking vs non-blocking and synthesis-simulation mismatch
+**Day3: Introduction to Verilog RTL Design and Synthesis**
+* Introduction to open source simulator iverilog
+  - [Introduction to iverilog design test bench](#introduction-toiverilog-design-test-bench)
+* Labs using iverilog and gtkwave
+  - [Introduction](#introduction-to-lab)
+  - [Introduction to iverilog gtkwave](#introduction-to-iverilog-gtkwave)
+* Introduction to Yosys and logic synthesis
+  - [Introduction to Yosys](#introduction-to-yosys)
+  - [Introduction to logic synthesis](#introduction-tologic-synthesis)
+* [Labs using Yosys and Sky130 PDKs](#labs-using-yosys-and-sky130-pdks)
+
+**Day4: Timing libs, hierarchical vs flat synthesis and efficient flop coding styles**
+* [Introduction to timing .libs](#introduction-to-timing-.libs)
+* [Heirarchical vs Flat synthesis](#heirarchical-vs-flat-synthesis)
+* Various Flop coding styles and optimization
+  - [Why Flops and flop coding styles](#why-flops-and-flop-coding-styles)
+  - [Lab flop synthesis simulation](#lab-flop-synthesis-simulation)
+  - [Interesting Optimizations](#interesting-optimizations)
+
+**Day5: Combinational and sequential optimizations**
+* [Introduction to Optimizations](#introduction-to-optimizations)
+* [Combinational logic optimizations](#combinational-logic-optimizations)
+* [Sequential Logic Optimizations](#sequential-logic-optimizations)
+* [Sequential optimizations for unused outputs](#sequential-optimizations-for-unused-outputs)
+
+**Day6: GLS Blocking vs non-blocking and synthesis-simulation mismatch**
+* [GLS, Synthesis-Simulation mismatch and blocking vs non-blocking statements](#gls-synthesis-simulation-mismatch-and-blocking-vs-non-blocking-statements)
+* [Labs on GLS and Synthesis-Simulation mismatch](#labs-on-gls-and-synthesis-simulation-mismatch)
+* [Labs on GLS and Synthesis-Simulation mismatch for blocking statements](#labs-on-gls-and-synthesis-simulation-mismatch-for-blocking-statements)
+
 ## Skill Outcomes
 Upon completing this course, we will emerge with a robust skill set in RTL design using Verilog with a focus on Sky130 technology. We will comprehend the fundamental concepts of digital logic design, including combinational and sequential circuits, and be able to model complex behaviors using Verilog. Moreover, we will gain insights into the distinctive attributes of Sky130 technology, enabling them to optimize designs for performance and power. Through hands-on experience and troubleshooting exercises, we will have cultivated their practical problem-solving skills, ready to tackle real-world design challenges and lay the groundwork for advanced digital design pursuits.
 <details>
-  <summary>DAY1:Introduction to Verilog RTL Design and Synthesis</summary>
+  <summary>DAY3:Introduction to Verilog RTL Design and Synthesis</summary>
   
 ### Introduction to open-source simulator iverilog
 
@@ -408,7 +439,7 @@ Netlist code:
 
 </details>
 <details>
-  <summary>DAY2:Timing libs, heirarchical vs flat synthesis and efficient flop coding styles</summary>
+  <summary>DAY4:Timing libs, heirarchical vs flat synthesis and efficient flop coding styles</summary>
   
 ### Introduction to timing .libs:
 * To view the contents in the .lib
@@ -643,7 +674,7 @@ Netlist code:
 
 </details>
 <details>
-  <summary>DAY3: Combinational and Sequential Optimizations</summary>
+  <summary>DAY5: Combinational and Sequential Optimizations</summary>
   
 ### Introduction to Optimizations:
 
@@ -925,7 +956,7 @@ Netlist code:
 </details>
 
 <details>
-  <summary>DAY4: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch</summary>
+  <summary>DAY6: GLS, blocking vs non-blocking and Synthesis-Simulation mismatch</summary>
 
 ### GLS, Synthesis-Simulation mistmatch and blocking vs non-blocking statements:
 * GLS: Gate Level Simulation
